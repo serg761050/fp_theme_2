@@ -7,7 +7,7 @@ import org.pm.api.dto.response.RegistrationResponse;
 public class RegistrationApiClients extends BaseApiClients {
 
     public RegistrationResponse postUser(UserRegistrationRequest newUser, int httpStatusCode) {
-        Response response = post("/api/v3/registration/byform", newUser);
+        Response response = postRegistration("/api/v3/registration/byform", newUser);
         return response.then()
                 .statusCode(httpStatusCode)
                 .extract()
